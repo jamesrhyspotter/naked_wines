@@ -30,6 +30,11 @@ class BasketPage extends StatelessWidget {
               final product = state.products[index];
 
               return ListTile(
+                leading: Image(
+                  image: NetworkImage(product.productImageUrl),
+                  height: 40,
+                  width: 40,
+                ),
                 title: Text(product.name),
                 subtitle: Text('£${product.price / 100}'),
                 onTap: () {
